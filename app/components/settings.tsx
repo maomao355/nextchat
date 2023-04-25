@@ -325,7 +325,7 @@ export function Settings() {
               </div>
             </Popover>
           </SettingItem>
-
+          {/* 
           <SettingItem
             title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
             subTitle={
@@ -349,7 +349,7 @@ export function Settings() {
                 onClick={() => checkUpdate(true)}
               />
             )}
-          </SettingItem>
+          </SettingItem> */}
 
           <SettingItem title={Locale.Settings.SendKey}>
             <select
@@ -514,7 +514,7 @@ export function Settings() {
               title={config.historyMessageCount.toString()}
               value={config.historyMessageCount}
               min="0"
-              max="25"
+              max="6"
               step="1"
               onChange={(e) =>
                 updateConfig(
@@ -531,8 +531,8 @@ export function Settings() {
           >
             <input
               type="number"
-              min={500}
-              max={4000}
+              min={300}
+              max={2000}
               value={config.compressMessageLengthThreshold}
               onChange={(e) =>
                 updateConfig(
